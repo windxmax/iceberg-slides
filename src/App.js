@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import StartPage from './StartPageFolder/StartPage'
 import SecondPage from './SecondPageFolder/SecondPage'
 import ThirdPage from './ThirdPageFolder/ThirdPage'
@@ -24,7 +23,7 @@ const Fullpage = (fullpageProps) => (
           <div className="section" >
             <ThirdPage/>
           </div>
-          <NextSibling id='Sibling'/>
+          <NextSibling />
         </ReactFullpage.Wrapper>
 
       );

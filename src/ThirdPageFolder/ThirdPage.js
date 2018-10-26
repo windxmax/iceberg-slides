@@ -17,18 +17,44 @@ export default class ThirdPage extends Component{
     let last = this.state.rangeValue
     let newRange = e.target.value
     this.setState({rangeValue : newRange});
-    if(newRange > 25 && last <25 && newRange < 75){
-      window.fullpage_api.moveSlideRight();
+    if(newRange < 25 && last < 25){
+      //ничего не делаем
     }
-    if(newRange > 75 && last < 75){
-      window.fullpage_api.moveSlideRight();
+    if(newRange > 25 && last < 25){
+      if(newRange < 75){
+        window.fullpage_api.moveSlideRight();
+      }
+      if(newRange > 75){
+        for (let i=0; i<2; i++ ){
+          setTimeout(window.fullpage_api.moveSlideRight(), 1000);
+        }
+      }
     }
-    if(newRange < 25 && last > 25 && newRange < 75){
-      window.fullpage_api.moveSlideLeft();
+    if(newRange > 25 && last > 25){
+      if(newRange > last && newRange > 75){
+        window.fullpage_api.moveSlideRight();
+      }
     }
+
+    if(newRange > 75 && last > 75){}
+
     if(newRange < 75 && last > 75){
-      window.fullpage_api.moveSlideLeft();
+      if(newRange > 25){
+        window.fullpage_api.moveSlideLeft();
+      }
+      if(newRange < 25){
+        for(let i=0; i<2; i++){
+          setTimeout(window.fullpage_api.moveSlideLeft(), 1000);
+
+        }
+      }
     }
+    if(newRange < 75 && last < 75){
+      if(newRange < 25){
+        window.fullpage_api.moveSlideLeft();
+      }
+    }
+
   }
   componentDidMount() {
     window.fullpage_api.setAllowScrolling(false, 'left, right');
