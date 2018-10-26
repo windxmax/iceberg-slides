@@ -1,14 +1,170 @@
-body {
+html,
+body{
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.root,
+.App,
+html,
+body{
+  height: 100%;
+  width: 100%;
+}
+
+.Start_page{
+  background: url(./img/more_copy.png);
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  color: #0d319c;
+}
+
+.Txt_headline{
+  position: absolute;
+  top: 145px;
+  left: 73px;
+  width: 803px;;
+}
+
+.Second_page{
+  background: url(./img/more_copy_2.png);
+  background-size: 100%;
+  margin-top: -2px;
+  width: 100%;
+  height: 100%;
+}
+
+.Second_page_header_text{
+  width: 545px;
+  padding-top: 208px;
+  padding-left: 236px;
+}
+
+.Third_page_one_header{
+  position: absolute;
+  width: 348px;
+  top: 116px;
+  left: 85px;
+}
+
+.Third_page_one_content{
+  position: absolute;
+  top: 206px;
+  left: 241px;
+}
+.Third_page_one_iceberg{
+  position: absolute;
+  top: 111px;
+  left: 21px;
+}
+
+.Third_page_two{
+    position: initial;
+}
+.Third_page_two_content{
+  position: absolute;
+  top: 158px;
+  left: 1182px;
+}
+
+.Third_page_two_iceberg{
+  position: absolute;
+  top: 93px;
+  left: 1068px;
+}
+.Third_page_two_header{
+  position: absolute;
+  width: 290px;
+  top: 116px;
+  left: 1109px;
+}
+
+.Third_page_three_header{
+  position: absolute;
+  width: 348px;
+  top: 116px;
+  left: 2129px;
+}
+
+
+.Third_page_three{
+  position: initial;
+}
+.Third_page_three_content{
+  position: absolute;
+  top: 150px;
+  right: 64px;
+}
+.Third_page_three_iceberg{
+  position: absolute;
+  top: 108px;
+  right: 3px;
+}
+
+.Third_page{
+  position: relative;
+  background: url(./img/more_copy_3.png);
+  background-size: 100%;
+  margin-top: -2px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Third_page_input_ranges{
+  -webkit-appearance: none;
+  position: absolute;
+  bottom: 70px;
+  width: 639px;
+  height: 12px;
+  background-color: #d1eaff;
+  z-index: 2;
+
+}
+.Third_page_input_ranges:focus{
+  border: none;
+  outline: none;
+}
+
+.Third_page_input_ranges::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width:43.5px;
+    height:55.5px;
+    cursor:pointer;
+    background: url(./img/iceberg_range_item.png);
+}
+
+.Third_page_range_date{
+  width: 644px;
+  position: absolute;
+  bottom: 29px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 2;
+
+}
+
+.Next_sibling{
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span{
+  background: white!important;
+  height: 12px!important;
+  width: 12px!important;
+  margin: -6px 0 0 -6px!important;
+  border-radius: 100%!important;
+}
+
+#fp-nav ul li:hover a.active span,
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span{
+  background: rgba(200, 120, 40)!important;
 }

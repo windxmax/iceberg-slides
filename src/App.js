@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react-dom';
+import StartPage from './StartPageFolder/StartPage'
+import SecondPage from './SecondPageFolder/SecondPage'
+import ThirdPage from './ThirdPageFolder/ThirdPage'
+import NextSibling from './NextSibling'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+import 'fullpage.js/vendors/scrolloverflow';
+import ReactFullpage from '@fullpage/react-fullpage';
 
-export default App;
+
+const Fullpage = (fullpageProps) => (
+  <ReactFullpage
+    {...fullpageProps}
+    render={() => {
+      return (
+        <ReactFullpage.Wrapper >
+          <div className="section active" >
+            <StartPage/>
+          </div>
+          <div className="section" >
+            <SecondPage/>
+          </div>
+          <div className="section" >
+            <ThirdPage/>
+          </div>
+          <NextSibling id='Sibling'/>
+        </ReactFullpage.Wrapper>
+
+      );
+    }}
+  />
+);
+
+export default Fullpage
